@@ -2,4 +2,7 @@ FROM duckietown/dt-core:ente
 
 WORKDIR /code
 
-CMD ["bash"]
+COPY ./packages /code/packages
+COPY ./launchers /launchers
+
+CMD ["/launchers/default.sh"]
